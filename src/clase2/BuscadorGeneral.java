@@ -1,6 +1,5 @@
 package clase2;
 
-import clase1.Resultado;
 
 public class BuscadorGeneral extends Buscador {
 

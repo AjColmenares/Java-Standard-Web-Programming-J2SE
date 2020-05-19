@@ -1,4 +1,4 @@
-package clase1;
+package clase2;
 
 public class Resultado {
 	private String titulo;
