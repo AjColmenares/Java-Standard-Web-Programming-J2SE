@@ -12,7 +12,19 @@ public abstract class Buscador {
 	this.clave = clave;
 }
 
-	public abstract Resultado[]  buscar();
+	public Resultado[] buscargeneral() {
+		String sqlGeneral = "Select * From ARTICULO";
+		
+		String sqlParticular = getSQL();
+		
+		String sqlFinal = sqlGeneral + sqlParticular;
+		
+		return buscar(sqlFinal);
+	}
+	
+	public abstract String getSQL();
+	
+	public abstract Resultado[]  buscar(String sql);
 
 
 	

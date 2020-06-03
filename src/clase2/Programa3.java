@@ -22,7 +22,7 @@ public class Programa3 {
 
 			System.out.println("Ejecutando busqueda....");
 			
-			Resultado[] res = bAux.buscar();
+			Resultado[] res = bAux.buscar(clave);
 			
 			for(Resultado aux : res ) {
 				System.out.println(aux);

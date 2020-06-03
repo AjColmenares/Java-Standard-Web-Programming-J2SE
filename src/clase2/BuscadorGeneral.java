@@ -9,11 +9,11 @@ public class BuscadorGeneral extends Buscador {
 	}
 
 	@Override
-	public Resultado[] buscar() {
+	public Resultado[] buscar(String sql) {
 		// TODO Auto-generated method stub
-		String sql = "SELECT  * FROM ARTICULOS WHERE TITULO LIKE '%" + super.clave + "%'";
-
-		System.out.println( "Ejecutando: " + sql);
+		
+		
+	System.out.println("ejecutando consulta");
 		
 		Resultado result1 = new Resultado("PROGRAMACION BASICA", "FIGUEROA, LEONEL", new Float(679), true);
 		Resultado result2 = new Resultado("PROGRAMACION PARA NIÑOS 1", "PEÑA MILLAHUAL, CLAUDIO A.", new Float(578),true);
@@ -24,5 +24,12 @@ public class BuscadorGeneral extends Buscador {
 
 		return resultados;
 	}
+
+	@Override
+	public String getSQL() {
+		// TODO Auto-generated method stub
+		return "articulo where tipo_articulo in (1,2,3,4) LIKE '%" +this.clave + "%'";
+	}
+
 
 }

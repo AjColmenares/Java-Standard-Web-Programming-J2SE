@@ -10,9 +10,9 @@ public class BuscadorPelicula extends Buscador{
 	}
 
 	@Override
-	public Resultado[] buscar() {
+	public Resultado[] buscar(String sql) {
 		// TODO Auto-generated method stub
-	String sql = "SELECT  * FROM ARTICULOS WHERE TITULO LIKE '%" + super.clave + "%'";
+	String sqlInicial = "SELECT  * FROM ARTICULOS WHERE TITULO LIKE '%" + this.clave + "%'";
 	
 	
 	Resultado result1 = new Resultado("PROGRAMACION DE TV", "LOS HERMANOS W", new Float(1000), true);
@@ -21,6 +21,12 @@ public class BuscadorPelicula extends Buscador{
 		
 		
 		return resultados;
+	}
+
+	@Override
+	public String getSQL() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
